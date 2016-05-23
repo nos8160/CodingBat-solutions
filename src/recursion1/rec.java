@@ -10,5 +10,7 @@ package recursion1;
  * @author nazrul
  */
 public class rec {
-    
+    public static void main(String[] args) {
+        System.out.println("asf");
+    }
 }
