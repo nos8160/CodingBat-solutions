@@ -11,15 +11,26 @@ package logic2;
  */
 public class evenlySpaced {
     public static boolean evenlySpace(int a, int b, int c){
-int x=Math.abs(a-b);
-int y=Math.abs(a-c);
-if(x==y || x*2==y)
-    return true;
-else
-    return false;
+         int mid;
+int large=Math.max(a, Math.max(b, c));
+
+  int low=Math.min(a, Math.min(b, c));
+ if(a<large && a>low)
+      mid=a;
+ else
+ if(b<large && b>low)
+     mid=b;
+ else
+      mid=c;
+        System.out.println(large+""+mid+""+low);
+  if((large-mid)==(mid-low))
+      return true;
+  else
+      return false;
+  
     }
     public static void main(String[] args) {
-        int a=3,b=4,c=8;
+        int a=4,b=6,c=2;
         System.out.println(evenlySpace(a, b, c));
     }
 }
