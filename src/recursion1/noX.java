@@ -9,21 +9,18 @@ package recursion1;
  *
  * @author nazrul
  */
-public class count7 {
-public static int count7(int n){
-    System.out.println(n);
-if(n<10 && n==7)
-    return 1;
-if(n<=0) return 0;
+public class noX {
+public static String noX(String str){
+if(str.length()==0)
+    return "";
 else
-    if(n%10==7){
-    return 1+count7(n/10);
-    }
+    if(str.charAt(0)=='x')
+        return ""+noX(str.substring(1));
 else
-        return count7(n/10);
+        return str.charAt(0)+noX(str.substring(1));
 }    
     public static void main(String[] args) {
-        int i=727;
-        System.out.println(count7(i));
+        String s="asdf";
+        System.out.println(noX(s));
     }
 }

@@ -9,21 +9,22 @@ package recursion1;
  *
  * @author nazrul
  */
-public class count7 {
-public static int count7(int n){
-    System.out.println(n);
-if(n<10 && n==7)
+public class count8 {
+public static int count8(int n){
+if(n<=10 && n==8)
     return 1;
-if(n<=0) return 0;
+if(n<10)
+    return 0;
+if(n%10==8 && (n/10)%10==8)
+    return 2+count8(n/10);
+if(n%10==8)
+    return 1+count8(n/10);
 else
-    if(n%10==7){
-    return 1+count7(n/10);
-    }
-else
-        return count7(n/10);
+    return count8(n/10);
+
 }    
     public static void main(String[] args) {
-        int i=727;
-        System.out.println(count7(i));
+        int i=456;
+        System.out.println(count8(i));
     }
 }
