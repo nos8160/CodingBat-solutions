@@ -13,7 +13,7 @@ import java.util.Arrays;
  */
 public class fix34 {
     public static int [] fix34(int [] nums){
-        int loc=0;
+    int loc=0;
     for(int i=0;i<nums.length;i++){
     if(nums[i]==3){
     for(int j=0;j<nums.length;j++){
@@ -23,7 +23,7 @@ public class fix34 {
     nums[j]=temp;
     loc=i+1;
     }
-     }
+    }
     } 
     }
     return nums;
