@@ -11,14 +11,23 @@ package array3;
  */
 public class linearIn {
 public static boolean linearIn(int[] outer, int[] inner){
-for(int i=0;i<inner.length;i++){
-
-
-}
+    int count=0;
+    for(int i=0;i<inner.length;i++){
+    for(int j=0;j<outer.length;j++){
+    if(inner[i]==outer[j]){
+    count++;
+    break;
+    }
+        
+    
+    }
+    
+    }
+return count>=inner.length;
 }    
     public static void main(String[] args) {
-        int arr1[]={4,5};
-        int arr2[]={7,9};
+        int arr1[]={2,2,2,2};
+        int arr2[]={2,4};
         System.out.println(linearIn(arr1, arr2));
     }
 }
