@@ -11,24 +11,22 @@ package recursion1;
  */
 public class array11 {
 public static int array11(int nums[],int index){
-    if(nums.length==0)
-        return 0;
-    if(index==nums.length-1 )
-    return 0;
-if(index==nums.length-1 && nums[index]==11)
+    if(nums.length==0)return 0;
+    if(index==nums.length-1 && nums[index]==11){
     return 1;
-if(index==nums.length-1 )
-    return 0;
-else
-
-if(nums[index]==11)
-    return 1+array11(nums, index+1);
-else
-    return array11(nums, index+1);
+    }
+    if(index==nums.length-1)
+        return 0;
+    else
+        if(nums[index]==11)
+            return 1+array11(nums, index+1);
+    else
+            return array11(nums, index+1);
+        
 
 }    
     public static void main(String[] args) {
-        int arr[]={};
+        int arr[]={1,11};
         System.out.println(array11(arr, 0));
     }
 }
