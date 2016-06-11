@@ -12,12 +12,13 @@ package logic1;
  */
 public class fizzString1 {
    public static String  module(String str){
-    if(str.startsWith("f")){return "Fizz";}
-    if(str.endsWith("b")){return "Buzz";}
-    if(str.startsWith("f")&& str.endsWith("b")){
+   if(str.startsWith("f")&& str.endsWith("b")){
     return "FizzBuzz";
     
     }
+       if(str.startsWith("f")){return "Fizz";}
+    if(str.endsWith("b")){return "Buzz";}
+   
     
     return str;
     }
