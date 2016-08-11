@@ -11,20 +11,12 @@ package recursion1;
  */
 public class stringClean {
 public static String stringClean(String str){
-if(str.length()==1)
+if(str.length()<=1)
     return str.substring(0);
-int i=0;
-if(str.charAt(i)==str.charAt(i+1)){
-while(i<str.length()-1)
-{
-if(str.charAt(i)==str.charAt(i+1))
-    i++;
+if(str.charAt(0)==str.charAt(1))
+return stringClean(str.substring(1));
 else
-    return str.charAt(i)+stringClean(str.substring(i+1));
-}}
-
     return str.charAt(0)+stringClean(str.substring(1));
-
 }    
     public static void main(String[] args) {
         String s="azzzd";
